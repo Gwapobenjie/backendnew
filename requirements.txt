@@ -12,3 +12,4 @@ tzdata==2025.1
 virtualenv==20.30.0
 whitenoise==6.9.0
 dj-database-url
+django-cors-headers
