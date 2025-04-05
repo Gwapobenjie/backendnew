@@ -16,16 +16,18 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from todos import views
+from django.shortcuts import render
 from todos.views import TaskListCreateView, TaskDetailView
 
-
+# Create a simple homepage view
+def home(request):
+    return render(request, 'home.html')  # Or a simple HttpResponse
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('todos.urls')),  # Assuming you have a 'todos' app
-    path('tasks/', TaskListCreateView.as_view(), name='task-list'),
-    path('tasks/<int:pk>/', TaskDetailView.as_view(), name='task-detail'),
+    path('', views.home, name='home'),
+    path('tasks/', views.TaskListCreateView.as_view(), name='task-list'),
+    path('tasks/<int:pk>/', views.TaskDetailView.as_view(), name='task-detail'),
 ]
 
-urlpatterns += staticfiles_urlpatterns()

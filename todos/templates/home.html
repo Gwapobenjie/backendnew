@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoApp</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background: linear-gradient(135deg, #f9d423, #ff4e50);
+            color: white;
+            padding: 50px 0;
+            text-align: center;
+            font-size: 3em;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        .intro {
+            text-align: center;
+            padding: 40px;
+            font-size: 1.2em;
+            background-color: #ffffff;
+            margin-top: -20px;
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .intro h2 {
+            color: #ff4e50;
+            font-weight: 600;
+        }
+
+        .intro p {
+            color: #777;
+            line-height: 1.6;
+        }
+
+        .features {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px 20px;
+            background-color: #fff;
+        }
+
+        .feature {
+            background-color: #ffffff;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            width: 25%;
+            padding: 30px;
+            text-align: center;
+            border-radius: 8px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .feature:hover {
+            transform: translateY(-10px);
+        }
+
+        .feature h3 {
+            font-size: 1.5em;
+            color: #f9d423;
+        }
+
+        .feature p {
+            color: #555;
+            font-size: 1em;
+        }
+
+        .btn {
+            background-color: #ff4e50;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-size: 1.1em;
+            margin-top: 20px;
+            display: inline-block;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #ff9f5f;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        @media (max-width: 768px) {
+            .features {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .feature {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>TodoApp</h1>
+    <p>Stay organized and manage your tasks efficiently</p>
+</header>
+
+<div class="intro">
+    <h2>Welcome to TodoApp</h2>
+    <p>
+        TodoApp is a simple yet powerful tool designed to help you keep track of your daily tasks and stay productive.
+        Whether you're managing work, personal goals, or just everyday tasks, TodoApp is here to help you.
+    </p>
+</div>
+
+<div class="features">
+    <div class="feature">
+        <h3>Task List</h3>
+        <p>View all your tasks and their current status. Easily manage your day-to-day activities.</p>
+        <a href="/tasks" class="btn">View Tasks</a>
+    </div>
+    <div class="feature">
+        <h3>Create New Task</h3>
+        <p>Add new tasks in seconds. Stay on top of your schedule with TodoApp's simple interface.</p>
+        <a href="/tasks/create" class="btn">Create Task</a>
+    </div>
+    <div class="feature">
+        <h3>Track Your Progress</h3>
+        <p>Keep track of completed tasks and monitor your productivity over time.</p>
+        <a href="/tasks" class="btn">Track Progress</a>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2025 TodoApp - All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
