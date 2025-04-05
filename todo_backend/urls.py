@@ -23,12 +23,9 @@ from todos.views import TaskListCreateView, TaskDetailView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('api/', include('todos.urls')),
-]
-
-urlpatterns += staticfiles_urlpatterns()
-
-urlpatterns = [
+    path('api/', include('todos.urls')),  # Assuming you have a 'todos' app
     path('tasks/', TaskListCreateView.as_view(), name='task-list'),
     path('tasks/<int:pk>/', TaskDetailView.as_view(), name='task-detail'),
 ]
+
+urlpatterns += staticfiles_urlpatterns()
