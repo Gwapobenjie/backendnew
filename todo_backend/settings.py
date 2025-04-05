@@ -39,9 +39,10 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'corsheaders',
     'todos',
     'rest_framework',
-    'corsheaders',
+
 ]
 
 MIDDLEWARE = [
@@ -92,7 +93,9 @@ DATABASES = {
 }
 
 DATABASES = {
-    "default": dj_database_url .parse(os.environ.get("DATABASE_URL"))
+    "default": dj_database_url.parse(
+    os.environ.get("DATABASE_URL", "sqlite:///db.sqlite3")
+)
 }
 
 # Password validation
